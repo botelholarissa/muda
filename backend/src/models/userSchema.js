@@ -1,0 +1,43 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+    _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        auto: true,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    senha: {
+        type: String,
+        required: true,
+    },
+    contacts: {
+        type: String,
+        required: true,
+    },
+    plants:{
+        type: Array, 
+        required: false
+    },
+    area: {
+        type: String,
+        required: false
+    },
+    followers: {
+        type: Array,
+        required: false
+    }
+
+});
+
+const usersCollection = mongoose.model('user', userSchema)
+
+module.exports = usersCollection;
