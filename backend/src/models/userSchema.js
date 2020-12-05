@@ -23,10 +23,11 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    plants:{
-        type: Array,
+    plants:[{
+        type: Schema.Types.ObjectId,
+        ref: "plant",
         required: false
-    },
+    }],
     area: {
         type: String,
         required: false

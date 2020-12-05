@@ -21,13 +21,14 @@ const plantSchema = new Schema({
     },
     available: {
         type: Boolean,
-        required: false
+        default: false,
+        required: true
     },
-    ownerId: {
+    ownerId: [{
         type: Schema.Types.ObjectId,
         ref: 'user',
         required: true
-    }
+    }]
 }, { timestamps: true } );
 
 const plantsCollection = mongoose.model('plant', plantSchema);
