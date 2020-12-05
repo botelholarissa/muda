@@ -5,7 +5,7 @@ const cors = require('cors');
 const db = require('./models/repository');
 const index = require('./routes/index');
 const users = require('./routes/userRoutes');
-//const plants = require('./routes/plantRoutes');
+const plants = require('./routes/plantRoutes');
 
 db.connect();
 
@@ -14,6 +14,6 @@ app.use(express.json());
 
 app.use('/', index);
 app.use('/users', users);
-//app.use('/plants', plants)
+app.use('/plants', plants);
 
 module.exports = app
