@@ -57,10 +57,26 @@ const addPlant = (req, res) => {
         })
 }
 
+const deletePlant = (req, res) => {
+    const id = req.query.id;
+
+    plantsCollection.findByIdAndDelete(id, (error, plant) => {
+        console.log(plant)
+        if(error)
+            return res.status(500).send(error);
+        else {
+            if(plant)
+                return res.status(200).send({ message: "Plant has been deleted."})
+            else
+                return res.status(404).send({ message: "Plant doesn't exist in database"})
+        }
+    })
+}
+
 module.exports = {
     getAll,
     getById,
     addPlant,
-    updatePlant
-    
+    updatePlant,
+    deletePlant
 }

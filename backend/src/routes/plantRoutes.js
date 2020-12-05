@@ -6,7 +6,7 @@ router.get('/', controller.getAll);
 router.get('/:id', controller.getById);
 router.post('/create', controller.addPlant);
 router.put('/update', controller.updatePlant);
-//router.delete('/delete', controller.deletePlant);
+router.delete('/delete', controller.deletePlant);
 
 
 module.exports = router;
