@@ -27,7 +27,7 @@ const plantSchema = new Schema({
         type: Array,
         required: true
     }
-});
+}, { timestamps: true } );
 
 const plantsCollection = mongoose.model('plant', plantSchema);
 

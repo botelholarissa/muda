@@ -24,7 +24,7 @@ const userSchema = new Schema({
         required: true,
     },
     plants:{
-        type: Array, 
+        type: Array,
         required: false
     },
     area: {
@@ -36,7 +36,7 @@ const userSchema = new Schema({
         required: false
     }
 
-});
+}, { timestamps: true });
 
 const usersCollection = mongoose.model('user', userSchema)
 
