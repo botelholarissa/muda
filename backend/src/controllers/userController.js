@@ -50,16 +50,33 @@ const updateUser = (req, res) => {
                 return res.status(500).send(error);
             else {
                 if(user)
-                    return res.status(200).send(user);
+                    return res.status(200).send(user); 
                 else 
-                    return res.status(404);
+                    return res.status(404).send({ message: "User doesn't exist in database"});
             }
         })
+}
+
+const deleteUser = (req, res) => {
+    const id = req.query.id;
+
+    usersCollection.findByIdAndDelete(id, (error, user) => {
+        console.log(user)
+        if(error)
+            return res.status(500).send(error);
+        else {
+            if(user)
+                return res.status(200).send({ message: "User has been deleted."})
+            else
+                return res.status(404).send({ message: "User doesn't exist in database"})
+        }
+    })
 }
 
 module.exports = {
     getAll,
     getById,
     addUser,
-    updateUser
+    updateUser,
+    deleteUser
 }
