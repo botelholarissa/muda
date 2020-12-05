@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const db = require('./models/repository');
+const db = require('./configs/database');
 const index = require('./routes/index');
 const users = require('./routes/userRoutes');
 const plants = require('./routes/plantRoutes');
