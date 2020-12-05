@@ -23,8 +23,9 @@ const plantSchema = new Schema({
         type: Boolean,
         required: false
     },
-    owner: {
-        type: Array,
+    ownerId: {
+        type: Schema.Types.ObjectId,
+        ref: 'user',
         required: true
     }
 }, { timestamps: true } );
