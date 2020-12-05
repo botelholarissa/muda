@@ -36,8 +36,30 @@ const addUser = (req, res) => {
     })
 }
 
+const updateUser = (req, res) => {
+    const id = req.query.id;
+    const userBody = req.body;
+    const update = { new: true };
+
+    usersCollection.findByIdAndUpdate(
+        id,
+        userBody,
+        update,
+        (error, user) => {
+            if(error)
+                return res.status(500).send(error);
+            else {
+                if(user)
+                    return res.status(200).send(user);
+                else 
+                    return res.status(404);
+            }
+        })
+}
+
 module.exports = {
     getAll,
     getById,
-    addUser
+    addUser,
+    updateUser
 }
