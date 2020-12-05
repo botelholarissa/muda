@@ -24,7 +24,20 @@ const getById = (req, res) => {
     })
 }
 
+const addUser = (req, res) => {
+    const userBody = req.body;
+    const user = new usersCollection(userBody);
+
+    user.save((error) => {
+        if(error)
+            return res.status(400).send(error);
+        else 
+            return res.status(200).send(user)
+    })
+}
+
 module.exports = {
     getAll,
-    getById
+    getById,
+    addUser
 }
