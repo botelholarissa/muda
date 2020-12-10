@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
+const dotenv = require ('dotenv');
 
-const DB_URL = "mongodb://localhost:27017/muda"; 
+dotenv.config();
+
+const DB_URI = process.env.DB_URI 
 
 const connect = () => {
-    mongoose.connect(DB_URL, {
+    mongoose.connect(DB_URI, {
         useNewUrlParser: true,  
         useCreateIndex: true,  
         useFindAndModify: false, 
