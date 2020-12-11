@@ -19,7 +19,7 @@ const getById = (req, res) => {
             if(plant)
                 return res.status(200).send(plant);
             else
-                return res.status(404).send({ message: "Not found"})
+                return res.status(404).send({ message: "Planta não encontrada."})
         }
     })
 }
@@ -52,7 +52,7 @@ const addPlant = (req, res) => {
                 if(plant)
                     return res.status(200).send(plant); 
                 else 
-                    return res.status(404).send({ message: "Plant doesn't exist in database"});
+                    return res.status(404).send({ message: "Essa planta não existe na base de dados."});
             }
         })
 }
@@ -66,9 +66,9 @@ const deletePlant = (req, res) => {
             return res.status(500).send(error);
         else {
             if(plant)
-                return res.status(200).send({ message: "Plant has been deleted."})
+                return res.status(200).send({ message: "Sua planta foi deletada!."})
             else
-                return res.status(404).send({ message: "Plant doesn't exist in database"})
+                return res.status(404).send({ message: "Essa planta não existe na base de dados."})
         }
     })
 }

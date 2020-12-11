@@ -19,7 +19,7 @@ const getById = (req, res) => {
             if(user !== null)
                 return res.status(200).send(user);
             else
-                return res.status(404).send({ message: "User doesn't exist in database."});
+                return res.status(404).send({ message: "Usuário não existe na base de dados."});
         }
     })
 }
@@ -52,7 +52,7 @@ const updateUser = (req, res) => {
                 if(user)
                     return res.status(200).send(user); 
                 else 
-                    return res.status(404).send({ message: "User doesn't exist in database"});
+                    return res.status(404).send({ message: "Usuário não existe na base de dados."});
             }
         })
 }
@@ -66,9 +66,9 @@ const deleteUser = (req, res) => {
             return res.status(500).send(error);
         else {
             if(user)
-                return res.status(200).send({ message: "User has been deleted."})
+                return res.status(200).send({ message: "Usuário deletado"})
             else
-                return res.status(404).send({ message: "User doesn't exist in database"})
+                return res.status(404).send({ message: "Usuário não existe na base de dados."})
         }
     })
 }

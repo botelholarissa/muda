@@ -11,7 +11,7 @@ const plantSchema = new Schema({
         type: String,
         required: true
     },
-    comName: {
+    commonName: {
         type: String,
         required: true
     },

@@ -3,7 +3,7 @@ const dotenv = require ('dotenv');
 
 dotenv.config();
 
-const DB_URI = process.env.DB_URI 
+const DB_URI = process.env.DB_URI;
 
 const connect = () => {
     mongoose.connect(DB_URI, {
@@ -13,7 +13,7 @@ const connect = () => {
         useUnifiedTopology: true} );
     const connection = mongoose.connection;
 
-    connection.on('error', () => console.error('Err'));
+    connection.on('error', () => console.error("Couldn't connect to MongoDB."));
     connection.once('open', () => console.log('MongoDB connected'));
 }
 
