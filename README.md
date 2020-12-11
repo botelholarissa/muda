@@ -4,7 +4,7 @@
 
 - API com o objetivo de conectar pessoas e plantas 
 
-Na rotina de trabalho e nas grandes cidades algumas pessoas não dedicam um tempo para conectar com a natureza. Com a Muda pretendo facilitar a conexão de pessoas com a natureza trocando mudas e sementes entre si e exibindo seu jardim para seus amigos.
+Na rotina de trabalho e nas grandes cidades algumas pessoas não dedicam um tempo para conectar com a natureza. Com a Muda pretendo facilitar essa conexão através da troca de mudas e sementes e exibição de um jardim para seus amigos.
 
 A ideia partiu da minha paixão por plantas e dificuldade de manter um jardim de apartamento. Ter um lugar onde trocar mudas e ideias sobre plantar na cidade é um desejo antigo que está saindo do papel aos poucos. 
 
@@ -89,5 +89,6 @@ DELETE | /plants/delete | Deleta um usuário.
 
 ## Aprendizados
 
-Durante a execução do projeto percebi que ainda falta MUITO para aprender e também pude observar minha evolução. 
-Agradeço imensamente a Reprograma e a XP.inc pela oportunidade de aprender tanto em tão pouco tempo. 
+Durante a execução do projeto pude perceber de forma mais clara os métodos e técnologias que preciso aprender para transformar todo "TODO" desse projeto em "done". O caminho que ainda falta para trilhar é longo, mas não me sinto mais sozinha.  
+O curso aguçou ainda mais minha curiosidade por tecnologia e me deu várias ferramentas para resolver problemas reais com tecnologia.  
+Agradeço imensamente a Reprograma e a XP.inc pela oportunidade de aprender tanto em tão pouco tempo.
