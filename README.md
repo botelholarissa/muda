@@ -1,5 +1,7 @@
 # muda :seedling:
 
+Em construção.
+
 ## Objetivo
 
 - API com o objetivo de conectar pessoas e plantas 
@@ -16,7 +18,7 @@ A ideia partiu da minha paixão por plantas e dificuldade de manter um jardim de
  - [nodejs](https://nodejs.org/)
  - [npm](https://www.npmjs.com/)
  - [cors](https://www.npmjs.com/package/cors)
- - [dotenv](https://www.npmjs.com/package/dotenv)
+ - [dotenv](https://www.npmjs.com/package/dotenv)P criou que é linda e foi muito importante pro desenvolvimento do trabalho.
  - [express](https://www.npmjs.com/package/express)
  - [mongoose](https://www.npmjs.com/package/mongoose)
  - [nodemon](https://www.npmjs.com/package/nodemon)
