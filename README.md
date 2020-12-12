@@ -22,29 +22,34 @@ A ideia partiu da minha paixão por plantas e dificuldade de manter um jardim de
  - [nodemon](https://www.npmjs.com/package/nodemon)
 
 
-
-
 ## Como utilizar?
 
-Para utilizar a API localmente você precisa clonar o repositório:
 
-`
-git clone https://github.com/botelholarissa/muda.git
-`
+### Localmente:
 
-Instalar as dependências:
+#### Pré-requisitos
 
-`
-npm install
-`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o database NoSQL [Mongodb](https://www.mongodb.com/). Para realizar testes e fazer as requisições você pode utilizar o Curl, Postman ou Insomnia.
 
-Subir o servidor:
+No terminal você pode seguir os seguintes passos:
 
-`
-npm start
-`
+```bash
+# Clone este repositório
+$ git clone https://github.com/botelholarissa/muda.git
+# Acesse a pasta do projeto no terminal/cmd
+$ cd muda
+# Instale as dependências
+$ npm install
+# Execute o servidor
+$ npm start
+# O servidor inciará na porta: 5000 - acesse <http://localhost:5000>
+# Mongo conectado em mongodb://localhost:27017/apihogar
+```
 
-Depois você pode utilizar o Postman, Insominia ou algum outro REST API Client para navegar pelas rotas abaixo.
+### Heroku
+
+https://muda-app.herokuapp.com/
 
 ## Rotas
 
@@ -80,12 +85,38 @@ DELETE | /plants/delete | Deleta um usuário.
 [   ] Listar plantas disponíveis por área  
 [   ] Listar todas as plantas de um usuário  
 [   ] Listar todos os usuários que possuem um tipo de planta  
+[   ] Consumir a API pública da Wikipédia para preencher o nome e descrição das plantas  
+[   ] Fazer um frontend para consumir a API Muda   
 
-## Arquitetura
+## Arquitetura proposta e estrutura de pastas
 
 <p align= "center">
 <img src= "https://github.com/botelholarissa/muda/blob/main/img/MUDA.png">
-<p>
+<p>  
+
+```
+📁 muda
+  |
+  |- 📁 backend
+  |     |
+  |     |- 📁 src
+  |     |     |
+  |     |     |- 📁 controllers
+  |     |     |     |- 📄 database.js
+  |     |     |- 📁 controllers
+  |     |     |     |- 📄 plantsController.js
+  |     |     |     |- 📄 usersController.js
+  |     |     |- 📁 models
+  |     |     |     |- 📄 plantSchema.js
+  |     |     |     |- 📄 userSchema.js
+  |     |     |- 📁 routes
+  |     |     |     |- 📄 plantRoute.js
+  |     |     |     |- 📄 userRoute.js
+  |     |     |- 📄 app.js
+  |     |- 📄 package-lock.json
+  |     |- 📄 package.json
+  |     |- 📄 server.js
+```
 
 ## Aprendizados
 
