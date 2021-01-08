@@ -18,7 +18,7 @@ A ideia partiu da minha paixão por plantas e dificuldade de manter um jardim de
  - [nodejs](https://nodejs.org/)
  - [npm](https://www.npmjs.com/)
  - [cors](https://www.npmjs.com/package/cors)
- - [dotenv](https://www.npmjs.com/package/dotenv)P criou que é linda e foi muito importante pro desenvolvimento do trabalho.
+ - [dotenv](https://www.npmjs.com/package/dotenv)
  - [express](https://www.npmjs.com/package/express)
  - [mongoose](https://www.npmjs.com/package/mongoose)
  - [nodemon](https://www.npmjs.com/package/nodemon)
@@ -46,7 +46,7 @@ $ npm install
 # Execute o servidor
 $ npm start
 # O servidor inciará na porta: 5000 - acesse <http://localhost:5000>
-# Mongo conectado em mongodb://localhost:27017/apihogar
+# Mongo conectado em mongodb://localhost:27017/muda
 ```
 
 ### Heroku
